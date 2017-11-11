@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find your match</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<h1 style= "text-align: center"> FIND YOUR MATCH </h1>
+<h2 style= "text-align: center"> Fill out this survey and see who's waiting. </h2>
+<h3 style= "text-align: center">1 is bad. 5 is good ; ) </h3>
+
+<body>
+
+
+<div class="container">
+    <label>Name</label>
+    <input type="text" class="form-control" id="inputName" placeholder="Albert Yu">
+    <label>Photo</label>
+    <input type="text" class="form-control" id="inputPhoto" placeholder="Link To Photo">
+</div>
+
+<br>
+
+<div class = "container">
+	<div>1. How much do you like baseball? </div>
+		<br>
+   		<select id=Q1>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>2. How much do you enjoy the movie Fantastic Four? </div>
+		<br>
+		<select id=Q2>
+	  	  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>3. What would you rate Kate Upton? 1 through 5. 5 being very attractive. </div>
+		<br>
+		<select id=Q3>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>4. How attractive is Derek Jeter? </div>
+		<br>
+		<select id=Q4>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>5. How do you feel about using lotion everyday? </div>
+		<br>
+		<select id=Q5>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>6. How much do you like the movie Spy Kids? </div>
+		<br>
+		<select id=Q6>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>7. How much do you like watching the Choice Actress Teen Choice Award? </div>
+		<br>
+		<select id=Q7>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>8. I like tall girls. </div>
+		<br>
+		<select id=Q8>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>9. I like sunshine and margaritas. </div>
+		<br>
+		<select id=Q9>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div class = "container">
+	<div>10. I like Los Angeles. </div>
+		<br>
+		<select id=Q10>
+		  <option value=1>1</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5</option>
+		</select>
+	</div>
+</div>
+
+<br>
+
+<div style= "text-align:center">
+<!-- Button trigger modal -->
+<button type="button" id="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Your match awaits!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Perfect Match</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="body" class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+	$("#submit").on("click", function(event){
+		event.preventDefault();
+		var name = $("#inputName").val();
+		var photo = $("#inputPhoto").val();
+		var answerArray = [];
+		
+		var newUser= {
+        name: name,
+        photo: photo,
+        scores: answerArray
+      	};
+
+		var qAns1 = document.getElementById("Q1");
+		var qAns2 = document.getElementById("Q2");
+		var qAns3 = document.getElementById("Q3");
+		var qAns4 = document.getElementById("Q4");
+		var qAns5 = document.getElementById("Q5");
+		var qAns6 = document.getElementById("Q6");
+		var qAns7 = document.getElementById("Q7");
+		var qAns8 = document.getElementById("Q8");
+		var qAns9 = document.getElementById("Q9");
+		var qAns10 = document.getElementById("Q10");
+		answerArray.push(qAns1.options[qAns1.selectedIndex].value);
+		answerArray.push(qAns2.options[qAns2.selectedIndex].value);
+		answerArray.push(qAns3.options[qAns3.selectedIndex].value);
+		answerArray.push(qAns4.options[qAns4.selectedIndex].value);
+		answerArray.push(qAns5.options[qAns5.selectedIndex].value);
+		answerArray.push(qAns6.options[qAns6.selectedIndex].value);
+		answerArray.push(qAns7.options[qAns7.selectedIndex].value);
+		answerArray.push(qAns8.options[qAns8.selectedIndex].value);
+		answerArray.push(qAns9.options[qAns9.selectedIndex].value);
+		answerArray.push(qAns10.options[qAns10.selectedIndex].value);
+
+     	$.post("/api/friends", newUser)
+      	.done(function(data) {
+
+        var correctArray = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
+        var stuffIwant = newUser.scores;
+		var newArray= [];
+      		
+      	var number1= parseInt(stuffIwant[0]);
+      	var number2= parseInt(stuffIwant[1]);
+      	var number3= parseInt(stuffIwant[2]);
+      	var number4= parseInt(stuffIwant[3]);
+      	var number5= parseInt(stuffIwant[4]);
+      	var number6= parseInt(stuffIwant[5]);
+      	var number7= parseInt(stuffIwant[6]);
+      	var number8= parseInt(stuffIwant[7]);
+      	var number9= parseInt(stuffIwant[8]);
+      	var number10= parseInt(stuffIwant[9]);
+      		
+      			newArray.push(number1);
+      			newArray.push(number2);
+      			newArray.push(number3);
+      			newArray.push(number4);
+      			newArray.push(number5);
+      			newArray.push(number6);
+      			newArray.push(number7);
+      			newArray.push(number8);
+      			newArray.push(number9);
+      			newArray.push(number10);
+      			
+      	console.log(newArray);
+
+      	var num1= correctArray[0]-number1
+      	var num2= correctArray[1]-number2
+      	var num3= correctArray[2]-number3
+      	var num4= correctArray[3]-number4
+      	var num5= correctArray[4]-number5
+      	var num6= correctArray[5]-number6
+      	var num7= correctArray[6]-number7
+      	var num8= correctArray[7]-number8
+      	var num9= correctArray[8]-number9
+      	var num10= correctArray[9]-number10
+
+      	var totals= num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
+      	console.log(totals)
+
+        	if (totals > 10 ) {
+        		$.get("/api/friends", function(data) {
+ 				$("#body").append("<p>" + data[0].name + "</p>", "<p> <img src=" + data[0].photo + " width='300px'> </p>" );
+        		});
+        	} else {
+        		$.get("/api/friends", function(data) {
+        		$("#body").append("<p>" + data[1].name + "</p>", "<p> <img src=" + data[1].photo + "> </p>")
+        		});
+        	};
+  
+      	});
+
+    	$("#myModal").modal("show");
+      
+	})
+</script>
