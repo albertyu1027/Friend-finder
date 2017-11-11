@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var port = 5000;
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -47,6 +47,8 @@ app.post("/api/friends", function(req, res) {
 
 });
 
-app.listen(port, function() {
-  console.log("App listening on PORT " + port);
+var PORT = process.env.PORT || 5000;
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
 });
